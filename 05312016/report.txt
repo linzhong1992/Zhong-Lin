@@ -1,0 +1,1 @@
+Almost done with learing swing. Now getting used to WindowBuilder in Eclipse, which is a powerful visual programming tool combined with swing.

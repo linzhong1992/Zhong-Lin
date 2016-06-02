@@ -1,0 +1,1 @@
+Learning the usage of swing, which is the library for java GUI development. Learning curve might take 2~3 days.
