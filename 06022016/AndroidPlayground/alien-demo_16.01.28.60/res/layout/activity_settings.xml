@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/double_vertical_margin">
+        <com.dd.processbutton.iml.ActionProcessButton android:textSize="@dimen/text_size_18" android:paddingLeft="@dimen/half_padding" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_horizontal_margin" android:text="@string/save" android:onClick="onClickSave" />
+        <com.dd.processbutton.iml.ActionProcessButton android:textSize="@dimen/text_size_18" android:paddingLeft="@dimen/half_padding" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_horizontal_margin" android:text="@string/cancel" android:onClick="onClickCancel" />
+        <com.dd.processbutton.iml.ActionProcessButton android:textSize="@dimen/text_size_18" android:paddingLeft="@dimen/half_padding" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reset" android:onClick="onClickReset" />
+    </LinearLayout>
+    <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/double_vertical_margin" android:weightSum="1.0">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rfid_power" android:layout_weight="0.2" />
+        <SeekBar android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/power" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="29" android:layout_weight="0.6" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/txt_power" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/double_vertical_margin" android:weightSum="1.0">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rfid_session" android:layout_weight="0.2" />
+        <Spinner android:gravity="center" android:entries="@array/arraySession" android:layout_gravity="center_vertical" android:id="@id/session" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.8" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/double_vertical_margin" android:weightSum="1.0">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rfid_q" android:layout_weight="0.2" />
+        <SeekBar android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/q_value" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="15" android:layout_weight="0.6" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/txt_q" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.2" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/activity_vertical_margin" android:weightSum="1.0">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rfid_target" android:layout_weight="0.2" />
+        <Spinner android:gravity="center" android:entries="@array/arrayTarget" android:layout_gravity="center_vertical" android:id="@id/target_value" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.8" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/local_settings" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+            <CheckBox android:id="@id/chk_debug_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/half_padding" android:text="@string/debug_mode" android:layout_toRightOf="@id/chk_debug_mode" />
+        </RelativeLayout>
+        <TextView android:gravity="right" android:id="@id/txt_device_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

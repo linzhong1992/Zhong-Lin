@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/activity_vertical_margin">
+        <com.dd.processbutton.iml.ActionProcessButton android:textSize="@dimen/text_size_18" android:layout_gravity="center" android:id="@id/btnMask" android:paddingLeft="@dimen/half_padding" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/geiger_btn_mask" android:onClick="onClickMask" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/text_size_16" android:textColor="#ffffcdb4" android:layout_gravity="center" android:id="@id/mask_epc" android:paddingBottom="@dimen/half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/half_padding" android:text="@string/geiger_mask_all_tags" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/activity_vertical_margin">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/geiger_txt_rssi" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="@dimen/text_size_34" android:textStyle="bold" android:textColor="@color/red" android:gravity="center" android:layout_gravity="bottom" android:id="@id/geiger_rssi" android:layout_width="110.0dip" android:layout_height="wrap_content" android:text="0" />
+        <com.dd.processbutton.iml.ActionProcessButton android:textSize="@dimen/text_size_18" android:id="@id/geiger_search_btn" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/geiger_btn_start_search" android:onClick="onClickStartStopSearch" custom:pb_colorPressed="@color/scan_pressed" custom:pb_colorNormal="@color/scan_normal" custom:pb_colorProgress="@color/scan_progress" />
+    </LinearLayout>
+    <ProgressBar android:id="@id/geiger_progressBar" android:layout_width="fill_parent" android:layout_height="30.0dip" android:max="100" android:indeterminate="false" android:progressDrawable="@drawable/gradian_progressbar" style="@android:style/Widget.ProgressBar.Horizontal" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:typeface="monospace" android:textStyle="bold" android:gravity="left" android:layout_gravity="center" android:id="@id/geiger_epc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

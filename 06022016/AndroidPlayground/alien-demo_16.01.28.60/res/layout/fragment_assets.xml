@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginTop="@dimen/activity_vertical_margin">
+        <com.dd.processbutton.iml.ActionProcessButton android:layout_gravity="right" android:id="@id/assets_set_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/geiger_mask_btn_set" android:layout_alignParentLeft="true" />
+        <com.dd.processbutton.iml.ActionProcessButton android:layout_gravity="right" android:id="@id/assets_clear_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:text="@string/geiger_mask_btn_clear" android:layout_toRightOf="@id/assets_set_btn" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/standard_padding" android:layout_alignParentRight="true">
+            <ImageButton android:id="@id/add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_add_circle_outline_white_24dp" />
+            <ImageButton android:id="@id/remove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_remove_circle_outline_white_24dp" />
+            <ImageButton android:id="@id/edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_create_white_24dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ListView android:id="@id/assets_lv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:choiceMode="singleChoice" />
+</LinearLayout>

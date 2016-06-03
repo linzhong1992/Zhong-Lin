@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/activity_vertical_margin">
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/presets_load_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_horizontal_margin" android:text="@string/geiger_mask_btn_load" />
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/presets_set_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_horizontal_margin" android:text="@string/geiger_mask_btn_set" />
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/presets_clear_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/geiger_mask_btn_clear" />
+    </LinearLayout>
+    <TextView android:background="@color/grayslate" android:paddingLeft="@dimen/standard_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/standard_padding" android:text="@string/preset_format" />
+    <ListView android:id="@id/preset_lv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:choiceMode="singleChoice" />
+</LinearLayout>

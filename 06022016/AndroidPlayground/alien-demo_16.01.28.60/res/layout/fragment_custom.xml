@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/activity_vertical_margin" android:layout_alignParentTop="true">
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/specify_set_btn" android:padding="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/activity_vertical_margin" android:text="@string/geiger_mask_btn_set" />
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/specify_btn_clear" android:padding="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/geiger_mask_btn_clear" />
+    </LinearLayout>
+    <RadioGroup android:orientation="horizontal" android:id="@id/rg_speficy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkedButton="@id/rd_epc_startwith">
+        <RadioButton android:id="@id/rd_epc_startwith" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/epc_starts_with" android:layout_weight="1.0" />
+        <RadioButton android:id="@id/rd_arbitrary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="false" android:text="@string/custom" android:layout_weight="1.0" />
+    </RadioGroup>
+    <LinearLayout android:orientation="horizontal" android:id="@id/specify_groups" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin">
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_epc_start_with" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data" />
+            <EditText android:id="@id/epc_start_with_data" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="" android:singleLine="true" android:digits="0123456789ABCDEF" android:inputType="textCapCharacters" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/group_arbitrary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="Bank" />
+                <Spinner android:entries="@array/arrayBank" android:id="@id/specify_bank" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/bit_ptr" />
+                <EditText android:id="@id/specify_ptr" android:layout_width="110.0dip" android:layout_height="wrap_content" android:hint="" android:singleLine="true" android:digits="0123456789." android:inputType="numberDecimal" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/half_padding" android:text="@string/bit_len" />
+                <EditText android:id="@id/specify_bit_len" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0" android:hint="" android:singleLine="true" android:digits="0123456789." android:inputType="numberDecimal" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="Data" />
+                <EditText android:id="@id/specify_data" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="" android:singleLine="true" android:digits="0123456789ABCDEF" android:inputType="textCapCharacters" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

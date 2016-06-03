@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayBank">
+        <item>RESERVED</item>
+        <item>EPC</item>
+        <item>TID</item>
+        <item>USER</item>
+    </string-array>
+    <string-array name="arrayField">
+        <item>KillPwd</item>
+        <item>AccPwd</item>
+        <item>EPC</item>
+        <item>User</item>
+    </string-array>
+    <string-array name="arrayLock">
+        <item>Lock</item>
+        <item>Unlock</item>
+        <item>PermaLock</item>
+        <item>PermaUnlock</item>
+    </string-array>
+    <string-array name="arraySession">
+        <item>S0</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+    <string-array name="arrayTarget">
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+</resources>
