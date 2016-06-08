@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayBank">
+        <item>RESERVED</item>
+        <item>EPC</item>
+        <item>TID</item>
+        <item>USER</item>
+    </string-array>
+    <string-array name="arrayField">
+        <item>KillPwd</item>
+        <item>AccPwd</item>
+        <item>EPC</item>
+        <item>User</item>
+    </string-array>
+    <string-array name="arrayLock">
+        <item>Lock</item>
+        <item>Unlock</item>
+        <item>PermaLock</item>
+        <item>PermaUnlock</item>
+    </string-array>
+    <string-array name="arraySession">
+        <item>S0</item>
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+    </string-array>
+    <string-array name="arrayTarget">
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="colors">
+        <item>\#99cc00</item>
+        <item>\#33b5e5</item>
+        <item>\#0099cc</item>
+        <item>\#547bca</item>
+        <item>\#aa66cc</item>
+        <item>\#9933cc</item>
+        <item>\#669900</item>
+        <item>\#aeb857</item>
+        <item>\#cc0000</item>
+        <item>\#df5948</item>
+        <item>\#ff4444</item>
+        <item>\#ae6b23</item>
+        <item>\#ff8800</item>
+        <item>\#e5ae4f</item>
+        <item>\#ffbb33</item>
+        <item>\#cccccc</item>
+        <item>\#888888</item>
+    </string-array>
+    <string-array name="country_codes">
+        <item>-</item>
+        <item>AR</item>
+        <item>AU</item>
+        <item>BR</item>
+        <item>BG</item>
+        <item>CA</item>
+        <item>CN</item>
+        <item>CZ</item>
+        <item>DE</item>
+        <item>DK</item>
+        <item>ES</item>
+        <item>FI</item>
+        <item>FR</item>
+        <item>GB</item>
+        <item>GR</item>
+        <item>HU</item>
+        <item>ID</item>
+        <item>IT</item>
+        <item>JP</item>
+        <item>KR</item>
+        <item>NL</item>
+        <item>PL</item>
+        <item>PT</item>
+        <item>RU</item>
+        <item>SE</item>
+        <item>SK</item>
+        <item>SI</item>
+        <item>TR</item>
+        <item>TW</item>
+        <item>US</item>
+    </string-array>
+    <string-array name="fileEndingAudio">
+        <item>.mp3</item>
+        <item>.wav</item>
+        <item>.ogg</item>
+        <item>.midi</item>
+        <item>.wma</item>
+    </string-array>
+    <string-array name="fileEndingImage">
+        <item>.png</item>
+        <item>.gif</item>
+        <item>.jpg</item>
+        <item>.jpeg</item>
+        <item>.bmp</item>
+    </string-array>
+    <string-array name="fileEndingPackage">
+        <item>.jar</item>
+        <item>.zip</item>
+        <item>.rar</item>
+        <item>.gz</item>
+    </string-array>
+    <string-array name="fileEndingVideo">
+        <item>.mp4</item>
+        <item>.rm</item>
+        <item>.mpg</item>
+        <item>.avi</item>
+        <item>.mpeg</item>
+    </string-array>
+    <string-array name="fileEndingWebText">
+        <item>.htm</item>
+        <item>.html</item>
+        <item>.php</item>
+    </string-array>
+</resources>

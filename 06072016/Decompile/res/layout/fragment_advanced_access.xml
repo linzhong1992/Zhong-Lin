@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.dd.processbutton.iml.ActionProcessButton android:textSize="@dimen/text_size_18" android:id="@id/adv_btn_mask" android:paddingLeft="@dimen/half_padding" android:paddingRight="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mask" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="@dimen/text_size_16" android:textColor="#ffffcdb4" android:layout_gravity="center_vertical" android:id="@id/adv_mask" android:paddingLeft="@dimen/half_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/all_tags" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginTop="@dimen/standard_padding" android:layout_marginBottom="@dimen/half_padding">
+                <TextView android:layout_gravity="center_vertical" android:layout_width="40.0dip" android:layout_height="wrap_content" android:text="@string/access_password" />
+                <EditText android:typeface="monospace" android:gravity="top" android:layout_gravity="center_vertical" android:id="@id/adv_pwd" android:padding="@dimen/half_padding" android:layout_width="185.0dip" android:layout_height="wrap_content" android:text="00000000" android:digits="0123456789ABCDEF" android:inputType="textCapCharacters|textMultiLine|textNoSuggestions" />
+            </LinearLayout>
+            <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/standard_padding" android:layout_marginBottom="@dimen/standard_padding" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:padding="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:text="@string/rfid_bank" />
+                    <Spinner android:entries="@array/arrayBank" android:id="@id/adv_rw_bank" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:padding="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/word_ptr" />
+                    <EditText android:typeface="monospace" android:id="@id/adv_rw_word_offset" android:padding="@dimen/half_padding" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="0" android:inputType="numberDecimal" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:padding="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/word_count" />
+                    <EditText android:typeface="monospace" android:id="@id/adv_rw_word_len" android:padding="@dimen/half_padding" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="1" android:inputType="numberDecimal" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin">
+                <EditText android:typeface="monospace" android:id="@id/adv_rw_data" android:background="@drawable/edit_text_style" android:padding="@dimen/half_padding" android:layout_width="204.0dip" android:layout_height="wrap_content" android:digits="0123456789ABCDEF" android:inputType="textCapCharacters|textMultiLine|textNoSuggestions" />
+                <ImageButton android:layout_gravity="top" android:id="@id/adv_read_btn" android:paddingTop="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cached_white_24dp" />
+                <ImageButton android:layout_gravity="top" android:id="@id/adv_write_btn" android:paddingTop="@dimen/standard_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_create_white_24dp" android:onClick="onClickWriteKillPw" />
+            </LinearLayout>
+            <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/standard_padding" android:layout_marginBottom="@dimen/standard_padding" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:padding="@dimen/half_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11.0dip" android:text="@string/rfid_field" />
+                    <Spinner android:entries="@array/arrayField" android:id="@id/adv_lock_field" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <Spinner android:entries="@array/arrayLock" android:layout_gravity="bottom" android:id="@id/adv_lock_type" android:layout_width="140.0dip" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" />
+                <ImageButton android:layout_gravity="bottom" android:id="@id/adv_lock_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:src="@drawable/ic_lock_outline_white_24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

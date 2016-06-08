@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/imgAlien" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="wrap_content" android:layout_height="290.0dip" android:src="@drawable/alien_logo" />
+    <LinearLayout android:orientation="horizontal" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/btnInventory" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/standard_padding" android:text="@string/btn_inventory" android:layout_weight="0.5" android:onClick="onClickInventory" />
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/btnGeiger" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/standard_padding" android:text="@string/btn_geiger" android:layout_weight="0.5" android:onClick="onClickGeiger" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/btnTagAccess" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/standard_padding" android:text="@string/btn_tagacces" android:layout_weight="0.5" android:onClick="onClickTagAccess" />
+        <com.dd.processbutton.iml.ActionProcessButton android:id="@id/btnBarcode" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/standard_padding" android:text="@string/btn_barcode" android:layout_weight="0.5" android:onClick="onClickBarcode" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="left" android:id="@id/txt_model" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/standard_padding" />
+        <TextView android:gravity="right" android:id="@id/txt_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/standard_padding" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>
