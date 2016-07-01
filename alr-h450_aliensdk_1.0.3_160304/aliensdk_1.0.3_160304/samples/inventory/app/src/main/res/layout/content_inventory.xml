@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".InventoryActivity"
+    tools:showIn="@layout/activity_inventory">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        >
+
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="12dp"
+            android:onClick="onRead"
+            android:text="Read" />
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/btnRead"
+            android:layout_centerHorizontal="true"
+            android:text="START"
+            android:onClick="onScan"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/btnScan"
+            android:text="Clear"
+            android:onClick="onClear" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MASK"
+            android:paddingLeft="8dp"
+            android:paddingBottom="6dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/txtMask"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <TextView
+            android:id="@+id/txtBank"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="Bank"
+            android:layout_below="@id/txtMask"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="8dp"
+            android:focusable="false" />
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="BitPtr"
+            android:id="@+id/txtPtr"
+            android:layout_alignTop="@+id/txtBank"
+            android:layout_toEndOf="@+id/spinBank"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="BitLen"
+            android:id="@+id/txtLen"
+            android:layout_alignTop="@+id/txtPtr"
+            android:layout_toEndOf="@+id/txtPtr"
+            android:layout_marginLeft="8dp"/>
+
+        <Spinner
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:id="@+id/spinBank"
+            android:layout_below="@+id/txtPtr"
+            android:layout_alignParentStart="true"
+            android:spinnerMode="dropdown"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:entries="@array/arrayBanks" />
+
+        <EditText
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editBitPtr"
+            android:layout_alignBottom="@+id/spinBank"
+            android:layout_alignTop="@id/spinBank"
+            android:layout_alignStart="@+id/txtPtr"
+            android:text="0"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/txtLen"
+            android:focusable="true" />
+
+        <EditText
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editBitLen"
+            android:text="8"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/spinBank"
+            android:layout_alignTop="@id/spinBank"
+            android:layout_alignStart="@+id/txtLen"
+            android:focusable="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_alignParentEnd="true"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:text="SET"
+            android:id="@+id/btnMaskSet"
+            android:layout_alignTop="@id/txtBank"
+            android:layout_marginTop="16dp"
+            android:onClick="onMaskSet" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:text="CLEAR"
+            android:id="@+id/btnMaskClear"
+            android:layout_below="@id/btnMaskSet"
+            android:layout_alignStart="@+id/btnMaskSet"
+            android:onClick="onMaskClear" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editData"
+            android:layout_alignTop="@id/btnMaskClear"
+            android:layout_below="@id/spinBank"
+            android:layout_alignStart="@+id/spinBank"
+            android:layout_toLeftOf="@id/btnMaskClear"
+            android:digits="0123456789abcdefABCDEF"
+            android:focusable="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@id/footerLayout"
+        android:layout_height="match_parent"
+        android:background="#606060">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listTags"
+            android:layout_centerHorizontal="true"
+            android:choiceMode="singleChoice"
+            android:focusable="true"
+            android:focusableInTouchMode="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

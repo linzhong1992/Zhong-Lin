@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">Alien Sample Inventory</string>
+	<string-array name="arrayBanks">
+		<item>RES</item>
+		<item>EPC</item>
+		<item>TID</item>
+		<item>USR</item>
+	</string-array>
+</resources>
